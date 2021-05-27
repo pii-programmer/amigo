@@ -1,10 +1,10 @@
 class ChatsController < ApplicationController
   def index
-    #@chats = Chat.order(id: "DESC")
+    @chats = Chat.order(id: "DESC")
   end
 
   def create
-    #Chat.create(content: params[:content])
-    #redirect_to action: :index
+    chat = Chat.create(content: params[:content])
+    render json:{chat: chat}
   end
 end
