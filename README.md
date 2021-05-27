@@ -9,7 +9,5 @@
 | password | string | null: false |
 
 ### Association
-- has_many contents
-- has_many comments
 
-## contentsテーブル
+## chatsテーブル
