@@ -8,22 +8,21 @@
 | encrypted_password | string | null: false                |
 
 ### Association
-- belongs_to :chat
 - has_many :user_rooms
 - has_many :rooms, through: :user_rooms
+- belongs_to :chat
 
 
 ## roomsテーブル
 |  Column      |  Type      | Options             |
 | ------------ | ---------- | ------------------- |
+| title        | string     | null: false         |
 | content      | text       | null: false         |
 | user         | references | foreign_key: true   |
-| room_manager | references | foreign_key: true   |
 
 ### Association
 - has_many :user_rooms
 - has_many :users, through: :user_rooms
-- belongs_to :room_manager
 
 
 
@@ -37,15 +36,6 @@
 - belongs_to :user
 - belongs_to :room
 
-
-
-## room_managersテーブル
-|  Column  |  Type      | Options             |
-| -------- | ---------- | ------------------- |
-| title    | string     | null: false         |
-
-### Association
-- has_one :room
 
 
 
