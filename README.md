@@ -14,11 +14,11 @@
 
 
 ## roomsテーブル
-|  Column      |  Type      | Options             |
-| ------------ | ---------- | ------------------- |
-| title        | string     | null: false         |
-| content      | text       | null: false         |
-| user         | references | foreign_key: true   |
+|  Column      |  Type      | Options                        |
+| ------------ | ---------- | ------------------------------ |
+| title        | string     | null: false                    |
+| content      | text       | null: false                    |
+| user         | references | null: false, foreign_key: true |
 
 ### Association
 - has_many :user_rooms
@@ -27,10 +27,10 @@
 
 
 ## user_roomsテーブル
-|  Column  |  Type      | Options              |
-| -------- | ---------- | -------------------- |
-| user     | references | foreign_key: true    |
-| room     | references | foreign_key: true    |
+|  Column  |  Type      | Options                           |
+| -------- | ---------- | --------------------------------- |
+| user     | references | null: false, foreign_key: true    |
+| room     | references | null: false, foreign_key: true    |
 
 ### Association
 - belongs_to :user
@@ -40,10 +40,10 @@
 
 
 ## chatsテーブル
-|  Column  |  Type      | Options              |
-| -------- | ---------- | -------------------- |
-| content  | text       | null: false          |
-| user     | references | foreign_key: true    |
+|  Column  |  Type      | Options                           |
+| -------- | ---------- | --------------------------------- |
+| content  | text       | null: false                       |
+| user     | references | null: false, foreign_key: true    |
 
 ### Association
 - has_many :users
