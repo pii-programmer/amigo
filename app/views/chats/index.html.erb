@@ -2,8 +2,8 @@
   <div class="main-chat">
       <h2>Welcome to SPACE</h2>
         <div class="chat-header">
-            <div class="user-name">usagi chan</div>
-            <div class="user-name">panda kun</div>
+          <div class="user-name">usagi chan</div>
+          <div class="user-name">panda kun</div>
             <%= form_with url: "/chats", method: :post, id: "form" do |form| %>
             <div class="chat-form">
               <%= form.text_field :content, id: "form_text"%>
@@ -19,5 +19,14 @@
           <%= chat.content %>
         </div>
         <% end %>
+      <div class="chat-footer">
+        room作成ボタン
+        <%#= form_with url: #, method: :post, id: "room" do |room| %>
+          <%#<div class="chat-room">
+            <%#= form.text_field :category, id: "room-category"%>
+            <%#= form.submit 'お部屋をつくる' , id: "room-create" %>
+          <%#</div>
+        <%# end %>
+      </div>
   </div>
 </div>
