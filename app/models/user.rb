@@ -8,6 +8,6 @@ class User < ApplicationRecord
          validates_format_of :password, with: PASSWORD_REGEX
 
          validates :nickname, presence: true, length: { maximum: 30 }
-         
+
          belongs_to :chat
 end
