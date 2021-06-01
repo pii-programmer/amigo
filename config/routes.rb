@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
   devise_for :users
-  root to: 'chats#index'
-  resources :chats ,only: [:index, :create]
+  root to: 'chats#introduce'
+  resources :chats, only: [:index, :create] do
+    collection do
+      get 'introduce'
+    end
+  end
 end
