@@ -10,7 +10,7 @@
 ### Association
 - has_many :user_rooms
 - has_many :rooms, through: :user_rooms
-- belongs_to :chat
+- has_many :chats
 
 
 ## roomsテーブル
@@ -46,4 +46,4 @@
 | user     | references | null: false, foreign_key: true    |
 
 ### Association
-- has_many :users
+- belongs_to :users

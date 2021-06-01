@@ -3,5 +3,5 @@ class Chat < ApplicationRecord
     validates :content
     validates :user
   end
-  has_many :users
+  belongs_to :user
 end

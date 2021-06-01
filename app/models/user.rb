@@ -9,5 +9,5 @@ class User < ApplicationRecord
 
   validates :nickname, presence: true, length: { maximum: 30 }
 
-  belongs_to :chat
+  has_many :chats
 end
