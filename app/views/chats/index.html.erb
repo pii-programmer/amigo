@@ -1,6 +1,6 @@
 <div class="container">
   <div class="main-chat">
-      <h2>Welcome to SPACE</h2>
+      <h2>メインチャットへようこそ</h2>
         <div class="chat-header">
           <div class="user-name">うさぎさん</div>
           <div class="user-name">パンダさん</div>
@@ -19,14 +19,15 @@
           <%= chat.content %>
         </div>
         <% end %>
-      <div class="chat-footer">
-        room作成ボタン
+
+      <footer class="main-chat-footer">
+        <h3>room作成ボタンを入れる</h3>
         <%#= form_with url: #, method: :post, id: "room" do |room| %>
           <%#<div class="chat-room">
             <%#= form.text_field :category, id: "room-category"%>
             <%#= form.submit 'お部屋をつくる' , id: "room-create" %>
           <%#</div>
         <%# end %>
-      </div>
+      </footer>
   </div>
 </div>
