@@ -6,4 +6,5 @@ Rails.application.routes.draw do
       get 'introduce'
     end
   end
+  resources :rooms, only: [:new, :create]
 end
