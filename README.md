@@ -8,8 +8,9 @@
 | encrypted_password | string | null: false                |
 
 ### Association
-- has_many :user_rooms
-- has_many :rooms, through: :user_rooms
+- has_many :room_users
+- has_many :rooms, through: :room_users
+- has_many :messages
 - has_many :chats
 
 
@@ -17,25 +18,36 @@
 |  Column      |  Type      | Options                        |
 | ------------ | ---------- | ------------------------------ |
 | title        | string     | null: false                    |
-| content      | text       | null: false                    |
-| user         | references | null: false, foreign_key: true |
 
 ### Association
-- has_many :user_rooms
-- has_many :users, through: :user_rooms
+- has_many :room_users
+- has_many :users, through: :room_users
+- has_many :messages
 
 
 
-## user_roomsテーブル
+## room_usersテーブル
 |  Column  |  Type      | Options                           |
 | -------- | ---------- | --------------------------------- |
 | user     | references | null: false, foreign_key: true    |
 | room     | references | null: false, foreign_key: true    |
 
 ### Association
-- belongs_to :user
 - belongs_to :room
+- belongs_to :user
 
+
+
+## messagesテーブル
+|  Column  |  Type      | Options                        |
+| -------- | ---------- | ------------------------------ |
+| content  | text       | null: false                    |
+| user     | references | null: false, foreign_key: true |
+| room     | references | null: false, foreign_key: true |
+
+### Association
+- belongs_to :room
+- belongs_to :user
 
 
 
