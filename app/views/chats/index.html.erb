@@ -21,13 +21,7 @@
         <% end %>
 
       <footer class="main-chat-footer">
-        <h3>room作成ボタンを入れる</h3>
-        <%#= form_with url: #, method: :post, id: "room" do |room| %>
-          <%#<div class="chat-room">
-            <%#= form.text_field :category, id: "room-category"%>
-            <%#= form.submit 'お部屋をつくる' , id: "room-create" %>
-          <%#</div>
-        <%# end %>
+        <%= link_to 'ルームチャットをつくる？', new_room_path, class:"create-room" %>
       </footer>
   </div>
 </div>
