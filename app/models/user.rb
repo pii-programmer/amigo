@@ -10,4 +10,6 @@ class User < ApplicationRecord
   validates :nickname, presence: true, length: { maximum: 30 }
 
   has_many :chats
+  has_many :room_users
+  has_many :rooms, through: :room_users
 end
