@@ -1,3 +1,17 @@
-// Place all the styles related to the messages controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.room-chat-header{
+  display: flex;
+  justify-content: space-around;
+}
+
+.user-name{
+  font-size: 20px;
+}
+
+.room-chat-form{
+  text-align: right;
+}
+
+.room-chat-detail{
+  font-family: 'DotGothic16', sans-serif;
+  font-size: 12px;
+}

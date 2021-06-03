@@ -2,10 +2,10 @@
   <div class="main-chat">
       <h2>メインチャットへようこそ</h2>
         <div class="main-chat-header">
-          <div class="user-name">うさぎさん</div>
+          <div class="user-name"><%= current_user.nickname %>さん</div>
           <div class="user-name">パンダさん</div>
             <%= form_with url: "/chats", method: :post, id: "form" do |form| %>
-            <div class="chat-form">
+            <div class="main-chat-form">
               <%= form.text_field :content, id: "form_text"%>
               <%= form.submit 'しゃべってみる' , id: "submit" %>
             </div>
@@ -15,7 +15,7 @@
         </div>
 
         <% @chats.each do |chat| %>
-        <div class="chat-detail">
+        <div class="main-chat-detail">
           <%= chat.content %>
         </div>
         <% end %>

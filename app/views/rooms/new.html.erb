@@ -6,11 +6,11 @@
     </header>
 
     <%= form_with model:@room, local: true do |form| %>
-      <div class="room-form">
+      <div class="create-room-form">
         <h4>どんな話題でしゃべる？</h4>
           <%= form.text_field :title, class: "room-title", placeholder: '話題のタイトル' %>
       </div>
-      <div class="room-form">
+      <div class="create-room-form">
         <h4>誰としゃべる？</h4>
         <select name="room[user_ids][]">
           <option value="">おしゃべり仲間を探す</option>
@@ -20,7 +20,7 @@
         </select>
         <input name="room[user_ids][]" type="hidden" value=<%= current_user.id %>>
       </div>
-      <div class="room-form">
+      <div class="create-room-form">
         <%= form.submit 'ルームをつくる' , class: "room-submit" %>
       </div>
     <% end %>
