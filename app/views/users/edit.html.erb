@@ -1,0 +1,21 @@
+<h2>アカウント管理</h2>
+
+<%= form_with model: current_user, local: true do |f|%>
+
+    <div class="field">
+      <%= f.label :nickname %> <em>(6 characters maximum)</em><br />
+      <%= f.text_field :nickname, autofocus: true %>
+    </div>
+
+    <div class="field">
+      <%= f.label :email %><br />
+      <%= f.email_field :email %>
+    </div>
+
+    <div class='actions'>
+      <%= f.submit "Update" %>
+    </div>
+
+<% end %>
+
+<%= link_to "マイページに戻る", user_path(current_user.id), class: 'mypage-btn'%>

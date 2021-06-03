@@ -1,24 +1,18 @@
 <div class="container">
   <div class="introduce">
+
     <h1>Amigo</h1>
     <p>誰もが日常でamigoを体験できるアプリ</p>
-    
-    <footer class='top-page-footer'>
-      <div class='nav'>
-        <ul class='lists'>
-          <% if user_signed_in? %>
-            <li><%= link_to "#{current_user.nickname}さん", user_path(current_user.id), class: "mypage" %></li>
-            <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout" %></li>
-            <li><%= link_to 'メインチャットへ', chats_path, class: "main-chat" %></li>
-          <% else %>
-            <li><%= link_to 'ログイン', new_user_session_path, class: "login" %></li>
-            <li><%= link_to '新規登録', new_user_registration_path, class: "sign-up" %></li>
-          <% end %>
-        </ul>
-      </div>
-      <div class='tag'>
-        <%#ここにロゴ入れます= link_to image_tag("#", class:"furima-icon"), "/" %>
-      </div>
-    </footer>
+
+    <div class='top-nav'>
+        <% if user_signed_in? %>
+          <%= link_to "#{current_user.nickname}さんのマイページ", user_path(current_user.id), class: "mypage" %>
+          <%= link_to 'メインチャットへ', chats_path, class: "main-chat" %>
+        <% else %>
+          <%= link_to 'サインイン', new_user_registration_path, class: "sign-up" %>
+          <%= link_to 'ログイン', new_user_session_path, class: "login" %>
+        <% end %>
+    </div>
+
   </div>
 </div>
