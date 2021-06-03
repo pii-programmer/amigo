@@ -1,6 +1,6 @@
 const buildHTML = (XHR) => {
   const chat = XHR.response.chat;
-  const HTML = `<div class="chat-detail">${chat.content}</div>`;
+  const HTML = `<div class="main-chat-detail">${chat.content}</div>`;
   return HTML;
 }
 
