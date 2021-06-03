@@ -1,6 +1,6 @@
 <div class="container">
   <div class="mypage">
-    <img>
+    <%= image_tag @user.avatar.variant(resize: '150x150'), class:"user-avatar" if @user.avatar.attached? %>
     <strong><%= @nickname %>さんのマイページ</strong>
     <small><%= link_to "アカウント管理", edit_user_path(current_user.id), class: "edit-mypage" %></small>
     <h4>現在のアミーゴ指標</h4>
