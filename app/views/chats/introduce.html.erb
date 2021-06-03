@@ -9,8 +9,8 @@
           <%= link_to "#{current_user.nickname}さんのマイページ", user_path(current_user.id), class: "mypage" %>
           <%= link_to 'メインチャットへ', chats_path, class: "main-chat" %>
         <% else %>
-          <%= link_to 'ログイン', new_user_session_path, class: "login" %>
           <%= link_to 'サインイン', new_user_registration_path, class: "sign-up" %>
+          <%= link_to 'ログイン', new_user_session_path, class: "login" %>
         <% end %>
     </div>
 
