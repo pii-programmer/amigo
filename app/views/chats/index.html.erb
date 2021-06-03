@@ -2,8 +2,8 @@
   <div class="main-chat">
       <h2>メインチャットへようこそ</h2>
         <div class="main-chat-header">
-          <div class="user-name"><%= current_user.nickname %>さん</div>
-          <div class="user-name">パンダさん</div>
+          <%= link_to "#{current_user.nickname}さん", user_path(current_user.id), class: "user-nickname" %>
+          <%= link_to "ユーザーニックネームさん", user_path(current_user.id), class: "user-nickname" %> <%#ここに２人目のユーザーを紐づける%>
             <%= form_with url: "/chats", method: :post, id: "form" do |form| %>
             <div class="main-chat-form">
               <%= form.text_field :content, id: "form_text"%>
