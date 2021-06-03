@@ -6,7 +6,7 @@ class RoomsController < ApplicationController
   def create
     @room = Room.new(room_params)
     if @room.save
-      redirect_to chats_path
+      redirect_to chats_path #users#show作成後リダイレクト先をマイページへ変更
     else
       render :new
     end
