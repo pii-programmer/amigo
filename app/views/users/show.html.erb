@@ -2,8 +2,8 @@
   <div class="mypage">
     <img>
     <strong><%= @nickname %>さんのマイページ</strong>
-    <%= link_to "アカウント管理", edit_user_path(current_user.id), class: "edit-mypage" %>
-    <h3>現在のアミーゴ指標</h3>
+    <small><%= link_to "アカウント管理", edit_user_path(current_user.id), class: "edit-mypage" %></small>
+    <h4>現在のアミーゴ指標</h4>
     <h4>アイテム</h4>
   </div>
 </div>
