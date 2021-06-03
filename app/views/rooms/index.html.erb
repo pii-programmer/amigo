@@ -1,3 +1,9 @@
-<h2><%= current_user.nickname %>さんのルームチャット</h2>
+<div class="container">
+  <div class="room-chat-index">
+    
+    <h2><%= link_to current_user.nickname, user_path(current_user.id) %>さんのルームチャット</h2>
+    
+    <%= render "messages/room_manager" %>
 
-<%= render "messages/room_manager" %>
+  </div>
+</div>

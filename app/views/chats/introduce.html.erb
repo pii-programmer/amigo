@@ -7,7 +7,7 @@
       <div class='nav'>
         <ul class='lists'>
           <% if user_signed_in? %>
-            <li><%= link_to "#{current_user.nickname}さん", "#", class: "user-nickname" %></li>
+            <li><%= link_to "#{current_user.nickname}さん", user_path(current_user.id), class: "mypage" %></li>
             <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout" %></li>
             <li><%= link_to 'メインチャットへ', chats_path, class: "main-chat" %></li>
           <% else %>

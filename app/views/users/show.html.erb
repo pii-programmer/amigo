@@ -1,0 +1,9 @@
+<div class="container">
+  <div class="mypage">
+    <h1><%= current_user.nickname %>さんのマイページ</h1>
+    <img>
+    <%= link_to "#{current_user.nickname}さん", "#edit", class: "edit-mypage" %>
+    <h3>現在のアミーゴ指標</h3>
+    <h4>アイテム</h4>
+  </div>
+</div>
