@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="room-chat">
+    <h3><%= @room.title %></h3>
+    <div class="room-chat-header">
+      <div class="user-name"><%= current_user.nickname %>さん</div>
+      <div class="user-name">パンダさん</div>
+      <%= form_with model: [@room, @message], local: true do |form| %>
+        <div class="room-chat-form">
+          <%= form.text_field :content, class: 'messages-content' %>
+          <%= form.submit 'しゃべってみる', class: 'submit' %>
+        </div>
+      <% end %>
+    </div>
+
+    <% @messages.each do |message| %>
+      <div class="room-chat-detail">
+        <%= message.content %>
+      </div>
+    <% end %>
+
+  </div>
+</div>
