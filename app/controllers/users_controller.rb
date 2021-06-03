@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   def show
-    user = User.find(params[:id])
+    @user = User.find(params[:id])
     @nickname = current_user.nickname
   end
 
@@ -17,6 +17,6 @@ class UsersController < ApplicationController
 
   private
   def user_params
-    params.require(:user).permit(:nickname, :email)
+    params.require(:user).permit(:nickname, :email, :avatar)
   end
 end
