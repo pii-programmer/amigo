@@ -20,8 +20,9 @@
         </div>
         <% end %>
 
-      <footer class="main-chat-footer">
-        <%= link_to 'ルームチャットをつくる？', new_room_path, class:"create-room" %>
-      </footer>
+      <div class="rooms-btn">
+        <%= link_to 'ルームをつくる', new_room_path, class:"create-room" %>
+        <%= link_to 'ルーム一覧', rooms_path, class:"room-index" %>
+      </div>
   </div>
 </div>

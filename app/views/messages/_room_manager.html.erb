@@ -1,8 +1,3 @@
-<div class="create-room-btn">
-  <%= link_to '別のルームチャットをつくる', new_room_path %>
-</div>
-
-
 <div class="rooms">
   <% current_user.rooms.each do |room| %>
     <div class="room">
@@ -11,4 +6,8 @@
       </div>
     </div>
   <% end %>
+</div>
+
+<div class="create-room-btn">
+  <%= link_to '別のルームをつくる', new_room_path %>
 </div>
