@@ -4,13 +4,11 @@
 
 .container{
   font-family: monospace;
-  font-size: 16px;
-  text-align: center;
 }
 
 /*** topページ ***/
 .introduce-top{
-  height: 80vh;
+  height: 90vh;
   width: 100vw;
   background-color: black;
   color: white;
@@ -29,11 +27,41 @@
   height: 450px;
   background-color: #ff914d;
   color: white;
+  h4{
+    font-size: 30px;
+    text-align: left;
+  }
+}
+
+.item-apple{
+  text-align: right;
+}
+
+.introduce-main1{
+  position: relative;
+}
+
+.buy-btn{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 22px;
+  display: inline-block;
+  padding: 0.3em 1em;
+  border: solid 2px white;
+  border-radius: 3px;
+  transition: .4s;
+}
+
+.buy-btn:hover{
+  background: white;
+  color: gray;
 }
 
 .introduce-nav{
   width: 100vw;
   height: 100px;
+  font-size: 18px;
   background-color: black;
   color: white;
   display: flex;

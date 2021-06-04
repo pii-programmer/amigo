@@ -5,12 +5,16 @@
   </div>
 
   <div class="introduce-main1">
-    <h4>ゲストさんは人生ゲームの主人公になってゲームを進めます</h4>
-    <%#= image_tag "url", class:"" %>
+    <% if user_signed_in? %>
+      <h4><%=current_user.nickname%>さんは人生ゲームの主人公になってゲームを進めます</h4>
+    <% else %>
+      <h4>ゲストさんは人生ゲームの主人公になってゲームを進めます</h4>
+    <% end %>
+      <div class="item-apple"><%=image_tag "item-apple.png"%></div>
+      <div class="buy-btn" id="buy-btn">買う</div>
   </div>
   <div class="introduce-main2">
-    <h4>アミーゴ獲得方法はこちら</h4>
-    <%#= image_tag "url", class:"" %>
+    <%= image_tag "road.png", class:"road" %>
   </div>
 
   <div class='introduce-nav'>

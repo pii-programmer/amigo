@@ -6,6 +6,7 @@
   font-family: monospace;
   font-size: 15px;
   background-color: #ff914d;
+  height: 120px;
   width: 100vw;
   padding: 2vh 15vw;
   display: flex;
@@ -14,8 +15,8 @@
 }
 
 .amigo-logo{
-  width: 200px;
-  height: 200px;
+  width: 100px;
+  height: 100px;
 }
 
 .logout{
@@ -23,8 +24,6 @@
   color: white;
   display: inline-block;
   padding: 0.3em 1em;
-  text-decoration: none;
-  color: white;
   border: solid 2px white;
   border-radius: 3px;
   transition: .4s;
