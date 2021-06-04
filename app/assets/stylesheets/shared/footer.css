@@ -1,0 +1,36 @@
+* {
+  box-sizing: border-box;
+}
+
+.footer{
+  font-family: monospace;
+  font-size: 15px;
+  background-color: #ff914d;
+  width: 100vw;
+  padding: 2vh 15vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.amigo-logo{
+  width: 200px;
+  height: 200px;
+}
+
+.logout{
+  text-decoration: none;
+  color: white;
+  display: inline-block;
+  padding: 0.3em 1em;
+  text-decoration: none;
+  color: white;
+  border: solid 2px white;
+  border-radius: 3px;
+  transition: .4s;
+}
+
+.logout:hover{
+  background: white;
+  color: gray;
+}

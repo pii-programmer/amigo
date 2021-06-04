@@ -13,13 +13,5 @@
 
   <body>
     <%= yield %>
-
-    <footer>
-      <div class='tag'>
-        <%#ここにロゴ入れます= link_to image_tag("#", class:"furima-icon"), "/" %>
-      </div>
-      <%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout" %>
-    </footer>
-
   </body>
 </html>
