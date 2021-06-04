@@ -8,7 +8,7 @@
 
 /*** topページ ***/
 .introduce-top{
-  height: 90vh;
+  height: 100vh;
   width: 100vw;
   background-color: black;
   color: white;
@@ -56,6 +56,22 @@
 .buy-btn:hover{
   background: white;
   color: gray;
+  cursor: pointer;
+  cursor: hand;
+}
+
+.popup-detail{
+  position: absolute;
+  top: 65%;
+  left: 35%;
+  background-color: gray;
+  padding: 5px;
+  text-align: center;
+  font-family: 'DotGothic16', sans-serif;
+  a{
+    color: white;
+    font-size: 16px;
+  }
 }
 
 .introduce-nav{
