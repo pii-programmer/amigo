@@ -1,3 +1,64 @@
+* {
+  box-sizing: border-box;
+}
+
+.container{
+  font-family: monospace;
+  font-size: 16px;
+  text-align: center;
+}
+
+/*** topページ ***/
+.introduce-top{
+  height: 80vh;
+  width: 100vw;
+  background-color: black;
+  color: white;
+  h1{
+    font-size: 120px;
+    text-align: left;
+  }
+  p{
+    font-size: 40px;
+    text-align: left;
+  }
+}
+
+.introduce-main1, .introduce-main2{
+  width: 100vw;
+  height: 450px;
+  background-color: #ff914d;
+  color: white;
+}
+
+.introduce-nav{
+  width: 100vw;
+  height: 100px;
+  background-color: black;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.sign-up, .login, .mypage, .main-chat, .myroom{
+  text-decoration: none;
+  color: white;
+  display: inline-block;
+  padding: 0.3em 1em;
+  text-decoration: none;
+  color: white;
+  border: solid 2px white;
+  border-radius: 3px;
+  transition: .4s;
+}
+
+.sign-up:hover, .login:hover, .mypage:hover, .main-chat:hover, .myroom:hover{
+  background: white;
+  color: gray;
+}
+
+/*** main-chatページ ***/
 .main-chat-header{
   display: flex;
   justify-content: space-around;
