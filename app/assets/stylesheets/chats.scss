@@ -1,3 +1,108 @@
+* {
+  box-sizing: border-box;
+}
+
+.container{
+  font-family: monospace;
+}
+
+/*** topページ ***/
+.introduce-top{
+  height: 100vh;
+  width: 100vw;
+  background-color: black;
+  color: white;
+  h1{
+    font-size: 120px;
+    text-align: left;
+  }
+  p{
+    font-size: 40px;
+    text-align: left;
+  }
+}
+
+.introduce-main1, .introduce-main2{
+  width: 100vw;
+  height: 450px;
+  background-color: #ff914d;
+  color: white;
+  h4{
+    font-size: 30px;
+    text-align: left;
+  }
+}
+
+.item-apple{
+  text-align: right;
+}
+
+.introduce-main1{
+  position: relative;
+}
+
+.buy-btn{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 22px;
+  display: inline-block;
+  padding: 0.3em 1em;
+  border: solid 2px white;
+  border-radius: 3px;
+  transition: .4s;
+}
+
+.buy-btn:hover{
+  background: white;
+  color: gray;
+  cursor: pointer;
+  cursor: hand;
+}
+
+.popup-detail{
+  position: absolute;
+  top: 65%;
+  left: 35%;
+  background-color: gray;
+  padding: 5px;
+  text-align: center;
+  font-family: 'DotGothic16', sans-serif;
+  a{
+    color: white;
+    font-size: 16px;
+  }
+}
+
+.introduce-nav{
+  width: 100vw;
+  height: 100px;
+  font-size: 18px;
+  background-color: black;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.sign-up, .login, .mypage, .main-chat, .myroom{
+  text-decoration: none;
+  color: white;
+  display: inline-block;
+  padding: 0.3em 1em;
+  text-decoration: none;
+  color: white;
+  border: solid 2px white;
+  border-radius: 3px;
+  transition: .4s;
+}
+
+.sign-up:hover, .login:hover, .mypage:hover, .main-chat:hover, .myroom:hover{
+  background: white;
+  color: gray;
+}
+
+/*** main-chatページ ***/
 .main-chat-header{
   display: flex;
   justify-content: space-around;

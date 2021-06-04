@@ -1,18 +1,34 @@
 <div class="container">
-  <div class="introduce">
-
+  <div class="introduce-top">
     <h1>Amigo</h1>
     <p>誰もが日常でamigoを体験できるアプリ</p>
+  </div>
 
-    <div class='top-nav'>
-        <% if user_signed_in? %>
-          <%= link_to "#{current_user.nickname}さんのマイページ", user_path(current_user.id), class: "mypage" %>
-          <%= link_to 'メインチャットへ', chats_path, class: "main-chat" %>
-        <% else %>
-          <%= link_to 'サインイン', new_user_registration_path, class: "sign-up" %>
-          <%= link_to 'ログイン', new_user_session_path, class: "login" %>
-        <% end %>
-    </div>
+  <div class="introduce-main1">
+    <% if user_signed_in? %>
+      <h4><%=current_user.nickname%>さんは人生ゲームの主人公になってゲームを進めます</h4>
+    <% else %>
+      <h4>ゲストさんは人生ゲームの主人公になってゲームを進めます</h4>
+    <% end %>
+      <div class="item-apple"><%=image_tag "item-apple.png"%></div>
+      <div class="buy-btn" id="buy-btn">買う</div>
+      <div id="popup_area">
+      </div>
+  </div>
+  <div class="introduce-main2">
+    <%= image_tag "road.png", class:"road" %>
+  </div>
 
+  <div class='introduce-nav'>
+      <% if user_signed_in? %>
+        <%= link_to "#{current_user.nickname}さんのマイページ", user_path(current_user.id), class: "mypage" %>
+        <%= link_to 'メインチャットへ', chats_path, class: "main-chat" %>
+        <%= link_to 'ルーム一覧', rooms_path, class:"myroom" %>
+      <% else %>
+        <%= link_to 'サインイン', new_user_registration_path, class: "sign-up" %>
+        <%= link_to 'ログイン', new_user_session_path, class: "login" %>
+      <% end %>
   </div>
 </div>
+
+<%= render "shared/footer" %>

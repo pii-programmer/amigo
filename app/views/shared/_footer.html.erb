@@ -1,0 +1,8 @@
+<footer class="footer">
+  <div class="logo">
+    <%= link_to image_tag("amigo-logo.png", class:"amigo-logo"), "/" %>
+  </div>
+  <div class="logout-btn">
+    <%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout" %>
+  </div>
+</footer>

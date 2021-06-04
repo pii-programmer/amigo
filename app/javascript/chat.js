@@ -5,6 +5,17 @@ const buildHTML = (XHR) => {
 }
 
 function chat(){
+  const buyBtn = document.getElementById("buy-btn");
+  buyBtn.addEventListener('click', (e) => {
+    const popupArea = document.getElementById("popup_area");
+    const HTML = `
+      <div class="popup-detail">
+      <p>このアイテムを買うには10アミーゴ必要です。</p>
+      <a href="https://amigo-35568.herokuapp.com/chats">アミーゴ獲得方法はこちら<img src="../images/amigo-icon.png" height="20" width="70" ></a>
+      </div>`;
+    popupArea.insertAdjacentHTML("afterend", HTML);
+    });
+
   const submit = document.getElementById("submit");
   submit.addEventListener('click', (e) => {
     e.preventDefault();
