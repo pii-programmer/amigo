@@ -11,7 +11,7 @@ function chat(){
     const HTML = `
       <div class="popup-detail">
       <p>このアイテムを買うには10アミーゴ必要です。</p>
-      <a href="https://amigo-35568.herokuapp.com/chats">アミーゴ獲得方法はこちら<img src="../images/amigo-icon.png" height="20" width="70" ></a>
+      <a href="#">アミーゴ獲得方法はこちら<img src="amigo-icon.png" ></a>
       </div>`;
     popupArea.insertAdjacentHTML("afterend", HTML);
     });
