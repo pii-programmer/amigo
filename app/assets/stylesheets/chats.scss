@@ -85,7 +85,7 @@
   justify-content: flex-end;
 }
 
-.sign-up, .login, .mypage, .main-chat, .myroom{
+.sign-up, .login, .mypage, .to-main-chat, .myroom{
   text-decoration: none;
   color: white;
   display: inline-block;
@@ -97,7 +97,7 @@
   transition: .4s;
 }
 
-.sign-up:hover, .login:hover, .mypage:hover, .main-chat:hover, .myroom:hover{
+.sign-up:hover, .login:hover, .mypage:hover, .to-main-chat:hover, .myroom:hover{
   background: white;
   color: gray;
 }

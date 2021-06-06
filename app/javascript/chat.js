@@ -14,6 +14,7 @@ function chat(){
       <a href="#">アミーゴ獲得方法はこちら<img src="amigo-icon.png" ></a>
       </div>`;
     popupArea.insertAdjacentHTML("afterend", HTML);
+    return HTML
     });
 
   const submit = document.getElementById("submit");
