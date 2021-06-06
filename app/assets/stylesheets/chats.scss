@@ -103,20 +103,32 @@
 }
 
 /*** main-chatページ ***/
+.main-chat-title{
+  background-color: #6495ed;
+}
+
 .main-chat-header{
   display: flex;
   justify-content: space-around;
+  background-color: #6495ed;
+  .user-nickname{
+    font-size: 20px;
+  }
+  .main-chat-form{
+    text-align: right;
+  }
 }
 
-.user-nickname{
-  font-size: 20px;
+.get-amigo-explain{
+  background-color: #3cb371;
 }
 
-.main-chat-form{
-  text-align: right;
+.contents-area{
+  background-color: #ffffe0;
 }
 
 .main-chat-detail{
   font-family: 'DotGothic16', sans-serif;
   font-size: 12px;
+  background-color: #ffffe0;
 }

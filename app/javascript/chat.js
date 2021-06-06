@@ -11,7 +11,7 @@ function chat(){
     const HTML = `
       <div class="popup-detail">
       <p>このアイテムを買うには10アミーゴ必要です。</p>
-      <a href="#">アミーゴ獲得方法はこちら<img src="amigo-icon.png" ></a>
+      <a href="/chats">アミーゴ獲得方法はこちら<img src="amigo-icon.png" ></a>
       </div>`;
     popupArea.insertAdjacentHTML("afterend", HTML);
     return HTML
