@@ -19,6 +19,14 @@
   p{
     font-size: 40px;
     text-align: left;
+    position: relative;
+    z-index: 20;
+  }
+  .amigo-top{
+    position: absolute;
+    top: 18%;
+    left: 30%;
+    z-index: 10;
   }
 }
 
