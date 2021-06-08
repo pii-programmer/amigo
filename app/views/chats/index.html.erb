@@ -13,14 +13,12 @@
       <%= form_with url: "/chats", method: :post, id: "form" do |form| %>
         <div class="main-chat-form">
           <%= form.text_field :content, id: "form_text"%>
-          <%= form.submit 'しゃべってみる', id: "submit" %>
+          <%= form.submit 'しゃべってみる', class: "submit" %>
         </div>
       <% end %>
     </div>
-    <div class="amigo-space">
-      <%=image_tag "amigo-icon.png", class:"amigoicon" %>
+      <div class="amigo-space"><%=image_tag "amigo-icon.png", class: "amigoicon" %></div>
       <div class="amigo-graph"></div>
-    </div>
 
     <div class="contents-area" id="contents_area">
     </div>
