@@ -4,20 +4,10 @@ const buildHTML = (XHR) => {
   return HTML;
 }
 
-function chat(){
-  const buyBtn = document.getElementById("buy-btn");
-  buyBtn.addEventListener('click', (e) => {
-    const popupArea = document.getElementById("popup_area");
-    const HTML = `
-      <div class="popup-detail">
-      <p>このアイテムを買うには10アミーゴ必要です。</p>
-      <a href="#">アミーゴ獲得方法はこちら<img src="amigo-icon.png" ></a>
-      </div>`;
-    popupArea.insertAdjacentHTML("afterend", HTML);
-    });
-
-  const submit = document.getElementById("submit");
-  submit.addEventListener('click', (e) => {
+function chatIndex(){
+  const $amigoSpace = $('.amigo-space');
+  const $submit = $('.submit');
+  $submit.on('click', (e) => {
     e.preventDefault();
     const form = document.getElementById("form");
     const formData = new FormData(form);
@@ -34,8 +24,9 @@ function chat(){
       const formText = document.getElementById("form_text");
       contentsArea.insertAdjacentHTML("afterend", buildHTML(XHR));
       formText.value = "";
+      $amigoSpace.addClass('amigoicon');
     };
   });
 
 };
-window.addEventListener('load', chat);
+window.addEventListener('load', chatIndex);

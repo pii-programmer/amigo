@@ -1,4 +1,6 @@
 class ChatsController < ApplicationController
+  before_action :authenticate_user!, only: [:index, :create]
+
   def index
     @chats = Chat.includes(:user).order(id: "DESC")
   end
