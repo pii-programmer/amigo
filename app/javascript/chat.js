@@ -7,6 +7,7 @@ const buildHTML = (XHR) => {
 function chat(){
   const buyBtn = document.getElementById("buy-btn");
   buyBtn.addEventListener('click', (e) => {
+    e.preventDefault();
     const popupArea = document.getElementById("popup_area");
     const HTML = `
       <div class="popup-detail">
