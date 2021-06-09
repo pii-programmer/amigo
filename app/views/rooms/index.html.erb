@@ -1,9 +1,13 @@
 <div class="container">
   <div class="room-chat-index">
-    
-    <h2><%= link_to current_user.nickname, user_path(current_user.id) %>さんのルームチャット</h2>
-    
+
+    <h2><%= link_to current_user.nickname, user_path(current_user.id), class:"room-user-nickname" %>さんのルームチャット</h2>
+
     <%= render "messages/room_manager" %>
+
+    <div class="create-room-btn">
+      <%= link_to '別のルームをつくる', new_room_path, class:"c-room" %>
+    </div>
 
   </div>
 </div>
