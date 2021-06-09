@@ -1,10 +1,33 @@
 <div class="container">
-  <div class="mypage">
-    <%= image_tag @user.avatar.variant(resize: '150x150'), class:"user-avatar" if @user.avatar.attached? %>
-    <strong><%= @nickname %>さんのマイページ</strong>
-    <small><%= link_to "アカウント管理", edit_user_path(current_user.id), class: "edit-mypage" %></small>
-    <h4>現在のアミーゴ指標</h4>
-    <h4>アイテム</h4>
+  <div class="my-page">
+
+    <h2><%= @nickname %>さんのマイページ</h2>
+
+    <div class="m-user-avatar">
+      <h3 class="user-avatar">アバター：</h3>
+        <%= image_tag @user.avatar.variant(resize: '100x100') if @user.avatar.attached? %>
+        <%= link_to "アカウント管理", edit_user_path(current_user.id), class: "edit-mypage" %>
+    </div>
+
+    <div class="user-amigo-graph">
+      <h3 class="now-amigo-graph">現在のアミーゴ指標：</h3>
+    </div>
+
+    <div class="user-items">
+      <h3 class="now-items">獲得アイテム：</h3>
+      <table>
+        <tr>
+          <th>食べ物</th><th>材料</th><th>植物</th><th>ペット</th><th>隠し機能・・・</th>
+        </tr>
+        <tr>
+          <td><br><br><br></td><td></td><td></td><td></td><td></td>
+        </tr>
+        <tr>
+          <td><br><br><br></td><td></td><td></td><td></td><td></td>
+        </tr>
+      </table>
+    </div>
+
   </div>
 </div>
 

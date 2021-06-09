@@ -1,28 +1,33 @@
-<h2>アカウント管理</h2>
-
-<%= form_with model: current_user, local: true do |f|%>
-
-    <div class="field">
-      <%= f.label :nickname %> <em>(6 characters maximum)</em><br />
-      <%= f.text_field :nickname, autofocus: true %>
+<div class="container">
+  <div class="edit-account">
+    <h2>アカウント管理</h2>
+    
+    <%= form_with model: current_user, local: true do |f|%>
+    
+        <div class="field">
+          <%= f.label :ニックネーム, class:"nickname" %> <em>(6文字以上)</em><br />
+          <%= f.text_field :nickname, autofocus: true %>
+        </div>
+    
+        <div class="field">
+          <%= f.label :メールアドレス, class:"email" %><br />
+          <%= f.email_field :email %>
+        </div>
+    
+        <div class="field">
+          <%= f.label :アバター, class:"avatar" %><br />
+          <%= f.file_field :avatar %>
+        </div>
+    
+        <div class='actions'>
+          <%= f.submit "更新" %>
+        </div>
+    
+    <% end %>
+    
+    <div class="r-mypage-btn">
+      <%= link_to "マイページに戻る", user_path(current_user.id), class: 'mypage-btn'%>
     </div>
-
-    <div class="field">
-      <%= f.label :email %><br />
-      <%= f.email_field :email %>
-    </div>
-
-    <div class="field">
-      <%= f.label :アバター %><br />
-      <%= f.file_field :avatar %>
-    </div>
-
-    <div class='actions'>
-      <%= f.submit "Update" %>
-    </div>
-
-<% end %>
-
-<%= link_to "マイページに戻る", user_path(current_user.id), class: 'mypage-btn'%>
-
+  </div>
+</div>
 <%= render "shared/footer" %>
