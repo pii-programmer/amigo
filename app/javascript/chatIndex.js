@@ -9,6 +9,7 @@ function chatIndex(){
   const $submit = $('.submit');
   $submit.on('click', (e) => {
     e.preventDefault();
+    $amigoSpace.addClass('amigoicon');
     const form = document.getElementById("form");
     const formData = new FormData(form);
     const XHR = new XMLHttpRequest();
@@ -24,7 +25,6 @@ function chatIndex(){
       const formText = document.getElementById("form_text");
       contentsArea.insertAdjacentHTML("afterend", buildHTML(XHR));
       formText.value = "";
-      $amigoSpace.addClass('amigoicon');
     };
   });
 
