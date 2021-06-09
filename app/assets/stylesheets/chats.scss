@@ -204,7 +204,8 @@ h2{
   100% { transform: scale(1.0, 1.0) translate(0%, 0%); }
 }
 
-.main-chat-detail{
+.contents-area, .main-chat-detail{
   font-family: 'DotGothic16', sans-serif;
   font-size: 12px;
+  overflow: scroll;
 }
