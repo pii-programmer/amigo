@@ -123,6 +123,12 @@
   }
 }
 
+h2{
+  background-color: black;
+  color: white;
+  font-size: 36px;
+}
+
 .create-room, .room-index{
   text-decoration: none;
   color: black;
@@ -138,12 +144,6 @@
 .create-room:hover, .room-index:hover{
   background: black;
   color: white;
-}
-
-h2{
-  background-color: black;
-  color: white;
-  font-size: 36px;
 }
 
 .get-amigo-explain{
