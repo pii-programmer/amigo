@@ -2,10 +2,12 @@
   <div class="main-chat">
     <h2>メインチャットへようこそ</h2>
       <div class="get-amigo-explain">
-        <p>他のユーザーとおしゃべりすることでアミーゴ<%= image_tag "amigo-icon.png", class:"amigo-icon" %>を獲得できます。<br>
-           ただし、おしゃべりの内容によってアミーゴ獲得数は変わります。ポジティブな内容なら＋１アミーゴ！ ネガティブな内容ならー１アミーゴです。<br>
-           「 しゃべってみる 」のボタンからおしゃべりを開始しましょう。
+        <p class="get-amigo">
+          チャットをすることでアミーゴ<%= image_tag "amigo-icon.png", class:"amigo-icon" %>を獲得できます。<br>
+          こちらではアミーゴがどのように獲得できるかを試せます。<br>
+          チャットの発言内容が、ポジティブなら＋１アミーゴ！ ネガティブな内容ならー１アミーゴとなります。
         </p>
+        <%= image_tag "mr-amigo.png" %>
       </div>
       <div class="main-chat-header">
           <%= link_to "#{current_user.nickname}さん", user_path(current_user.id), class: "user-nickname" %>
