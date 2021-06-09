@@ -1,16 +1,18 @@
 <div class="container">
   <div class="room-chat">
-    <h3><%= @room.title %></h3>
+
+    <h2><%= @room.title %></h2>
     <div class="room-chat-header">
-      <%= link_to "#{current_user.nickname}さん", user_path(current_user.id), class: "user-nickname" %>
-      <%= link_to "ユーザーニックネームさん", user_path(current_user.id), class: "user-nickname" %> <%#ここに２人目のユーザーを紐づける%>
+        <%= link_to "#{current_user.nickname}さん", user_path(current_user.id), class: "user-nickname" %>
+        <%= link_to "ユーザーニックネームさん", user_path(current_user.id), class: "user-nickname" %> <%#ここに２人目のユーザーを紐づける%>
       <%= form_with model: [@room, @message], local: true do |form| %>
         <div class="room-chat-form">
-          <%= form.text_field :content, class: 'messages-content' %>
-          <%= form.submit 'しゃべってみる', class: 'submit' %>
+          <%= form.text_field :content %>
+          <%= form.submit 'しゃべってみる' %>
         </div>
       <% end %>
     </div>
+    <%#amigo-space導入%>
 
     <% @messages.each do |message| %>
       <div class="room-chat-detail">
@@ -20,7 +22,7 @@
 
     <div class="return-btn">
       <%= link_to 'ルーム一覧に戻る', rooms_path, class:"room-index" %>
-      <%= link_to 'メインチャットに戻る', chats_path, class:"main-chat" %>
+      <%= link_to 'メインチャットに戻る', chats_path, class:"r-mainchat" %>
     </div>
 
   </div>

@@ -1,14 +1,12 @@
 <div class="container">
   <div class="create-room">
 
-    <header class="create-room-header">
-      <h3>好きな話題でルームチャットをつくれるよ</h3>
-    </header>
+    <h2>好きな話題でルームチャットをつくろう</h2>
 
     <%= form_with model:@room, local: true do |form| %>
       <div class="create-room-form">
         <h4>どんな話題でしゃべる？</h4>
-          <%= form.text_field :title, class: "room-title", placeholder: '話題のタイトル' %>
+          <%= form.text_field :title, placeholder: '話題のタイトル' %>
       </div>
       <div class="create-room-form">
         <h4>誰としゃべる？</h4>
@@ -21,7 +19,7 @@
         <input name="room[user_ids][]" type="hidden" value=<%= current_user.id %>>
       </div>
       <div class="create-room-form">
-        <%= form.submit 'ルームをつくる' , class: "room-submit" %>
+        <%= form.submit 'ルームをつくる' %>
       </div>
     <% end %>
 

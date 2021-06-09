@@ -1,3 +1,113 @@
-// Place all the styles related to the rooms controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+/*** room-indexページ ***/
+.room-chat-index{
+  background-color: #87cefa;
+  width: 100vw;
+  height: calc(100vh - 120px);
+  position: relative;
+  .create-room-btn{
+    background-color: #fff0f5;
+    position: absolute;
+    bottom: 1%;
+    right: 1%;
+  }
+}
+
+.c-room{
+  text-decoration: none;
+  color: black;
+  display: inline-block;
+  padding: 0.3em 1em;
+  text-decoration: none;
+  color: black;
+  border: solid 2px black;
+  border-radius: 3px;
+  transition: .4s;
+}
+
+.c-room:hover{
+  background: black;
+  color: white;
+}
+
+.room-user-nickname{
+  font-size: 36px;
+  color: white;
+  text-decoration: none;
+}
+
+/*** room-indexページの_room_manager ***/
+.rooms{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-content: flex-start;
+  .room{
+    position: relative;
+    display: inline-block;
+    margin: 2em 1.5em;
+    padding: 7px 10px;
+    min-width: 120px;
+    max-width: 100%;
+    color: black;
+    font-size: 16px;
+    background: #fff0f5;
+    border: solid 3px black;
+    box-sizing: border-box;
+    border-radius: 15px;
+  }
+  .room:before{
+    content: "";
+    position: absolute;
+    bottom: -24px;
+    left: 50%;
+    margin-left: -15px;
+    border: 12px solid transparent;
+    border-top: 12px solid #fff0f5;
+    z-index: 2;
+  }
+  .room:after{
+    content: "";
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    margin-left: -17px;
+    border: 14px solid transparent;
+    border-top: 14px solid black;
+    z-index: 1;
+  }
+  .room .room-title{
+    margin: 0;
+    padding: 0;
+    color: black;
+    text-decoration: none;
+  }
+}
+
+/*** create-roomページ ***/
+.create-room{
+  width: 100vw;
+  height: calc(100vh - 120px);
+}
+
+.create-room-form{
+  margin: 15px;
+  input[type="text"]{
+    width: 280px;
+    height: 36px;
+  }
+  input[type="submit"]{
+    background: white;
+    color: black;
+    display: inline-block;
+    padding: 0.3em 1em;
+    text-decoration: none;
+    color: black;
+    border: solid 2px black;
+    border-radius: 3px;
+    transition: .4s;
+  }
+  input[type="submit"]:hover{
+    background: black;
+    color: white;
+  }
+}
