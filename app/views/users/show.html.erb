@@ -1,12 +1,12 @@
 <div class="container">
   <div class="my-page">
 
-    <h2><%= @nickname %>さんのマイページ</h2>
+    <h2><%= @user.nickname %>さんのマイページ</h2>
 
     <div class="m-user-avatar">
       <h3 class="user-avatar">アバター：</h3>
         <%= image_tag @user.avatar.variant(resize: '100x100') if @user.avatar.attached? %>
-        <%= link_to "アカウント管理", edit_user_path(current_user.id), class: "edit-mypage" %>
+        <%= link_to "アカウント管理", edit_user_path(@user.id), class: "edit-mypage" %>
     </div>
 
     <div class="user-amigo-graph">
