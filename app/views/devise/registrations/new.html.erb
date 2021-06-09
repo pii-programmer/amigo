@@ -6,7 +6,7 @@
       <%= devise_error_messages! %>
     
           <div class="field">
-            <%= f.label :ニックネーム, class:"nickname" %> <em>(6文字以上)</em><br />
+            <%= f.label :ニックネーム, class:"nickname" %> <em>(半角30文字以内)</em><br />
             <%= f.text_field :nickname, autofocus: true %>
           </div>
     
