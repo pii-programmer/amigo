@@ -38,8 +38,8 @@ table{
   }
 }
 
-/*** edit-accountページ ***/
-.edit-account{
+/*** サインイン・ログイン・編集ページ ***/
+.account{
   width: 100vw;
   height: calc(100vh - 120px);
   position: relative;
@@ -71,7 +71,11 @@ table{
   margin: 10px;
 }
 
-.nickname, .email, .avatar{
+.actions{
+  margin: 10px;
+}
+
+.nickname, .email, .avatar, .password, .password-confirmation{
   color: #010079;
   text-shadow: 0 0 5px white;
   border-left: solid 7px #010079;
@@ -81,7 +85,7 @@ table{
   padding: 5px;
 }
 
-input[type="text"], input[type="email"]{
+input[type="text"], input[type="email"], input[type="password"]{
   height: 30px;
   width: 200px;
   margin-top: 5px;
@@ -91,12 +95,8 @@ input[type="file"]{
   margin-top: 5px;
 }
 
-.actions{
-  margin: 5px 0 0 10px;
-}
-
 input[type="submit"]{
-  width: 120px;
+  width: 270px;
   height: 34px;
   background: #87cefa;
   color: white;
@@ -106,4 +106,27 @@ input[type="submit"]{
   border-bottom: solid 2px #010079;
   border-radius: 4px;
   font-weight: bold;
+}
+
+.auth-page{
+  display: inline-block;
+  padding: 0.3em 1em;
+  text-decoration: none;
+  color: black;
+  border: solid 2px black;
+  border-radius: 3px;
+  transition: .4s;
+}
+
+.auth-page:hover{
+  background: black;
+  color: white;
+}
+
+.auth-page-btn{
+  text-align: center;
+}
+
+.forgot-password{
+  color: black;
 }
