@@ -7,9 +7,15 @@
 
   <div class="introduce-main1">
     <% if user_signed_in? %>
-      <h4><%=current_user.nickname%>さんは人生ゲームの主人公になってゲームを進めます</h4>
+      <h4><%=current_user.nickname%>さんは主人公になって人生ゲームを進めることができます</h4>
+      <p>人生ゲームにはさまざまなイベントがあります。<br>
+      例えばお買い物とか・・・<br>
+      試しに買うボタンからお買い物をしてみましょう！</p>
     <% else %>
-      <h4>ゲストさんは人生ゲームの主人公になってゲームを進めます</h4>
+      <h4>ゲストさんは主人公になって人生ゲームを進めることができます</h4>
+      <p>人生ゲームにはさまざまなイベントがあります。<br>
+      例えばお買い物とか・・・<br>
+      試しに買うボタンからお買い物をしてみましょう！</p>
     <% end %>
       <div class="item-apple"><%=image_tag "item-apple.png"%></div>
       <div class="buy-btn" id="buy-btn">買う</div>
