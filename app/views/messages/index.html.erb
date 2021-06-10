@@ -4,8 +4,8 @@
 
     <h2><%= @room.title %></h2>
     <div class="room-chat-header">
-        <%= link_to "#{current_user.nickname}さん", user_path(current_user.id), class: "user-nickname" %>
-        <%= link_to "#{@users.nickname}さん", user_path(@users.id), class: "user-nickname" %>
+        <%= link_to "#{@user1.nickname}さん", user_path(@user1.id), class: "user-nickname" %>
+        <%= link_to "#{@user2.nickname}さん", user_path(@user2.id), class: "user-nickname" %>
       <%= form_with model: [@room, @message], local: true do |form| %>
         <div class="room-chat-form">
           <%= form.text_field :content %>
