@@ -13,7 +13,8 @@
         </div>
       <% end %>
     </div>
-    <%#amigo-space導入%>
+    <div class="amigo-space"><%=image_tag "amigo-icon.png", class: "amigoicon" %></div>
+    <div class="amigo-graph"><canvas id="amigograph" ></canvas></div>
 
     <% @messages.each do |message| %>
       <div class="room-chat-detail">
@@ -28,3 +29,4 @@
 
   </div>
 </div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.3.2/chart.min.js"></script>
