@@ -1,6 +1,7 @@
 <%= render "shared/footer" %>
 <div class="container">
   <div class="main-chat">
+
     <h2>メインチャットへようこそ</h2>
       <div class="get-amigo-explain">
         <p class="get-amigo">
@@ -17,7 +18,7 @@
         <%= form_with model: @chat do |f| %>
           <div class="main-chat-form">
             <%= f.text_field :content %>
-            <%= f.submit 'しゃべってみる', id:'submit' %>
+            <%= f.submit 'しゃべってみる' %>
           </div>
         <% end %>
       </div>
