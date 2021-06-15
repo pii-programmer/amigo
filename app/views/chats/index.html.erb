@@ -15,7 +15,7 @@
       <div class="main-chat-header">
           <%= link_to "#{current_user.nickname}さん", user_path(current_user.id), class: "user-nickname" %>
           <%= link_to "ゲストさん", user_path(current_user.id), class: "user-nickname" %>
-        <%= form_with model: @chat do |f| %>
+        <%= form_with model: @chat,id:"form" do |f| %>
           <div class="main-chat-form">
             <%= f.text_field :content %>
             <%= f.submit 'しゃべってみる' %>

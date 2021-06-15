@@ -1,11 +1,10 @@
-//function chatIndex(){
-//  //const $amigoSpace = $('.amigo-space');
-//  const submit = document.getElementById('submit');
-//  submit.addEventListener('click', (e) => {
-//    e.preventDefault();
-//    console.log("イベント発火");
-//    //$amigoSpace.addClass('amigoicon');
-//  });
-//
-//};
-//window.addEventListener('load', chatIndex);
+function poyon(){
+  const $amigoSpace = $('.amigo-space');
+  const form = document.getElementById("form");
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    $amigoSpace.toggleClass("amigoicon");
+  });
+
+};
+window.addEventListener('load', poyon);
