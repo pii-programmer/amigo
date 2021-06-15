@@ -7,7 +7,7 @@ class ChatsController < ApplicationController
   end
 
   def create
-    @chat = Chat.new(content: params[:chat][:content])
+    @chat = Chat.new(content: params[:chat][:content], user_id: current_user.id)
     if @chat.save
       ActionCable.server.broadcast 'chat_channel', content: @chat
     end
