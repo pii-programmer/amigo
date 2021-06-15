@@ -1,7 +1,5 @@
 class Chat < ApplicationRecord
-  with_options presence: true do
-    validates :content
-    validates :user
-  end
+  validates :user, presence: true
+  validates :content, presence: true
   belongs_to :user
 end
