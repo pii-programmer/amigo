@@ -13,8 +13,7 @@
       </div>
 
       <div class="main-chat-header">
-          <%= link_to "#{current_user.nickname}さん", user_path(current_user.id), class: "user-nickname" %>
-          <div class="user-nickname">お話相手さん</div>
+        <%= link_to "#{current_user.nickname}さん", user_path(current_user.id), class: "user-nickname" %>
         <%= form_with model: @chat,id:"form" do |f| %>
           <div class="main-chat-form">
             <%= f.text_field :content %>
@@ -23,8 +22,11 @@
         <% end %>
       </div>
 
+      <div class="amigo-parent">
         <div class="amigo-space"><%=image_tag "amigo-icon.png", class: "amigoicon" %></div>
         <div class="amigo-graph"><canvas id="amigograph" ></canvas></div>
+        <button id="button">更新</button>
+      </div>
 
       <div id='chats'>
         <% @chats.reverse_each do |chat| %>
@@ -40,7 +42,4 @@
       </div>
   </div>
 </div>
-<script type="text/javascript" src="moment.js"></script>
-<script type="text/javascript" src="Chart.js"></script>
-<script type="text/javascript" src="chartjs-plugin-streaming.js"></script>
-<%#<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.3.2/chart.min.js"></script>%>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.3.2/chart.min.js"></script>

@@ -1,10 +1,11 @@
 function chart(){
+
   const data = {
     labels: ["amigo"],
     datasets: [{
       axis: 'y',
       label: 'アミーゴ指標',
-      data: [85],
+      data: [61],
       fill: false,
       backgroundColor: [
         'rgba(255, 99, 132, 0.2)'
@@ -15,6 +16,7 @@ function chart(){
       borderWidth: 1
     }]
   };
+
   const config = {
     type: 'bar',
     data,
@@ -23,10 +25,15 @@ function chart(){
     }
   };
 
-  var amigoGraph = new Chart(
+  let amigoGraph = new Chart(
     document.getElementById('amigograph'),
     config
   );
+
+  $('#button').on('click', function(){
+    amigoGraph.config.data.datasets[0].data[0] += 1;
+    amigoGraph.update();
+  });
 
 };
 window.addEventListener('load', chart);
