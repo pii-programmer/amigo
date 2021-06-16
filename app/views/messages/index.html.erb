@@ -14,8 +14,11 @@
       <% end %>
     </div>
 
+  <div class="amigo-parent">
     <div class="amigo-space"><%=image_tag "amigo-icon.png", class: "amigoicon" %></div>
     <div class="amigo-graph"><canvas id="amigograph" ></canvas></div>
+    <button id="button">更新</button>
+  </div>
 
     <% @messages.each do |message| %>
       <div class="room-chat-detail">

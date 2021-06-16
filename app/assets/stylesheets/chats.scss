@@ -120,7 +120,7 @@
     position: absolute;
     bottom: 1%;
     right: 1%;
-    background-color: #ffffe0;;
+    background: #ffffe0;
   }
 }
 
@@ -191,8 +191,9 @@ h2{
 
 .main-chat-header{
   display: flex;
-  justify-content: space-around;
+  justify-content: flex-end;
   background-color: #ffffe0;
+  padding-right: 16px;
   .user-nickname{
     font-size: 20px;
     color: black;
@@ -216,6 +217,21 @@ h2{
       border-radius: 4px;
       font-weight: bold;
     }
+  }
+}
+
+.amigo-parent{
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  margin-right: 16px;
+  button{
+    height: 26px;
+    background:pink;
+    color:white;
+    font-weight: bold;
+    border:solid 1px red;
+    border-radius: 3px;
   }
 }
 
@@ -249,5 +265,5 @@ h2{
 .main-chat-detail{
   font-family: 'DotGothic16', sans-serif;
   font-size: 12px;
-  overflow: scroll;
+  margin-left: 20px;
 }
