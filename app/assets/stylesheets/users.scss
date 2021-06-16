@@ -15,6 +15,20 @@
   margin: 5px;
 }
 
+.user-amigo-graph{
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  button{
+    height: 26px;
+    background:pink;
+    color:white;
+    font-weight: bold;
+    border:solid 1px red;
+    border-radius: 3px;
+  }
+}
+
 .edit-mypage{
   color: gray;
   font-size: 14px;

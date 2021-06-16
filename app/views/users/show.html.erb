@@ -9,9 +9,10 @@
         <%= link_to "アカウント管理", edit_user_path(@user.id), class: "edit-mypage" %>
     </div>
 
+    <h3 class="now-amigo-graph">現在のアミーゴ指標：</h3>
     <div class="user-amigo-graph">
-      <h3 class="now-amigo-graph">現在のアミーゴ指標：</h3>
-        <div class="amigo-graph"><canvas id="amigograph" ></canvas></div>
+      <div class="amigo-graph"><canvas id="amigograph" ></canvas></div>
+      <button id="button">更新</button>
     </div>
 
     <div class="user-items">
