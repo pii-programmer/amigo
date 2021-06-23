@@ -3,7 +3,19 @@ Amigo
 
 # 概要
 「Amigo」の語源は「友だち」。  
-これは、人生ゲームとチャットを通して心豊かな生き方を見つけられるアプリです。
+これは、人生ゲームとチャットを通して心豊かな生き方を見つけられるアプリです。  
+#### Topページ
+[![Image from Gyazo](https://i.gyazo.com/aa0442a913d1e82bd93de1bb6f1b6994.png)](https://gyazo.com/aa0442a913d1e82bd93de1bb6f1b6994)
+#### 人生ゲーム（現在ゲーム開発中）
+[![Image from Gyazo](https://i.gyazo.com/db6dda469751d7a6ac54f7992546ced4.jpg)](https://gyazo.com/db6dda469751d7a6ac54f7992546ced4)
+#### メインチャットページ
+[![Image from Gyazo](https://i.gyazo.com/ff5c8a60d6177dadc041997755da0524.png)](https://gyazo.com/ff5c8a60d6177dadc041997755da0524)
+#### ルームチャット一覧ページ
+[![Image from Gyazo](https://i.gyazo.com/e2b2b206c48e3f1c01e66c0549c73d91.png)](https://gyazo.com/e2b2b206c48e3f1c01e66c0549c73d91)
+#### ルームチャットページ
+[![Image from Gyazo](https://i.gyazo.com/21b35f501f7e43f457beb8df21260068.png)](https://gyazo.com/21b35f501f7e43f457beb8df21260068)
+#### マイページ
+[![Image from Gyazo](https://i.gyazo.com/618e5a3ce89ace211b3bd6939da1f27e.png)](https://gyazo.com/618e5a3ce89ace211b3bd6939da1f27e)
 
 # 本番環境
 http://54.150.238.148/
