@@ -4,40 +4,40 @@
   <div class="main-chat">
 
     <h2>メインチャットへようこそ</h2>
-      <div class="get-amigo-explain">
-        <p class="get-amigo">
-          アミーゴ<%= image_tag "amigo-icon.png", class:"amigo-icon" %>は、チャットに参加することで獲得できます。<br>
-          こちらではアミーゴがどのように獲得できるかを試せます。<br>
-          チャットの発言内容が、ポジティブなら＋１アミーゴ！ ネガティブな内容ならー１アミーゴとなります。
-        </p>
-        <%= image_tag "mr-amigo.png" %>
-      </div>
 
-      <div class="main-chat-header">
-        <%= link_to "#{current_user.nickname}さん", user_path(current_user.id), class: "user-nickname" %>
+      <div class="get-amigo-explain">
         <%= form_with model: @chat,id:"form" do |f| %>
           <div class="main-chat-form">
             <%= f.text_field :content %>
             <%= f.submit 'しゃべってみる' %>
           </div>
         <% end %>
+
+        <p class="get-amigo">
+          ポジティブな発言なら１アミーゴ<%= image_tag "amigo-icon.png", class:"amigo-icon" %>増えるよ！<br>
+          ネガティブな発言なら１アミーゴ<%= image_tag "amigo-icon.png", class:"amigo-icon" %>減るよ。
+        </p>
       </div>
 
-      <div class="amigo-parent">
-        <div class="amigo-space"><%=image_tag "amigo-icon.png", class: "amigoicon" %></div>
-        <div class="amigo-graph"><canvas id="amigograph" ></canvas></div>
-        <button id="button">更新</button>
-      </div>
+      <div class="chat-wrapper">
+        <div id='chats' class="chat-space">
+          <% @chats.reverse_each do |chat| %>
+            <div class="main-chat-detail"><%= chat.content %></div>
+          <% end %>
+        </div>
 
-      <div id='chats'>
-        <% @chats.reverse_each do |chat| %>
-          <div class="main-chat-detail"><%= chat.content %></div>
-        <% end %>
+        <div class="amigo-parent">
+          <div class="amigo-space"><%=image_tag "amigo-icon.png", class: "amigoicon" %></div>
+          <div class="amigo-graph"><canvas id="amigograph" ></canvas></div>
+          <button id="button">更新</button>
+        </div>
       </div>
 
       <div class="room-btn">
           <%= link_to 'ルームをつくる', new_room_path, class:"c-room" %>
       </div>
+  
   </div>
+
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.3.2/chart.min.js"></script>

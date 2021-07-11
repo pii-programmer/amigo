@@ -123,59 +123,11 @@ h2{
 }
 
 .get-amigo-explain{
-  background-color: #ffffe0;
-  .amigo-icon{
-    width: 50px;
-    height: 20px;
-  }
-  .get-amigo{
-    position: relative;
-    display: inline-block;
-    margin: 2em 1.5em;
-    padding: 7px 10px;
-    min-width: 120px;
-    max-width: 100%;
-    color: black;
-    font-size: 16px;
-    background: #fff0f5;
-    border: solid 3px black;
-    box-sizing: border-box;
-    border-radius: 15px;
-  }
-  .get-amigo:before{
-    content: "";
-    position: absolute;
-    top: 50%;
-    right: -24px;
-    margin-top: -12px;
-    border: 12px solid transparent;
-    border-left: 12px solid #fff0f5;
-    z-index: 2;
-  }
-  .get-amigo:after{
-    content: "";
-    position: absolute;
-    top: 50%;
-    right: -30px;
-    margin-top: -14px;
-    border: 14px solid transparent;
-    border-left: 14px solid black;
-    z-index: 1;
-  }
-}
-
-.main-chat-header{
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-around;
+  align-items: center;
   background-color: #ffffe0;
-  padding-right: 16px;
-  .user-nickname{
-    font-size: 20px;
-    color: black;
-    text-decoration: none;
-  }
   .main-chat-form{
-    text-align: right;
     input[type="text"]{
       width: 280px;
       height: 36px;
@@ -193,20 +145,70 @@ h2{
       font-weight: bold;
     }
   }
+  .get-amigo{
+    position: relative;
+    display: inline-block;
+    margin: 1.5em 0 1.5em 15px;
+    padding: 7px 10px;
+    min-width: 120px;
+    max-width: 100%;
+    color: black;
+    font-size: 16px;
+    background: #fff0f5;
+    border: solid 3px black;
+    box-sizing: border-box;
+    border-radius: 15px;
+  }
+  .get-amigo:before{
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -24px;
+    margin-top: -12px;
+    border: 12px solid transparent;
+    border-right: 12px solid #fff0f5;
+    z-index: 2;
+  }
+  .get-amigo:after{
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -30px;
+    margin-top: -14px;
+    border: 14px solid transparent;
+    border-right: 14px solid black;
+    z-index: 1;
+  }
+  .amigo-icon{
+    width: 50px;
+    height: 20px;
+  }
 }
 
-.amigo-parent{
+.chat-wrapper{
   display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
-  margin-right: 16px;
-  button{
-    height: 26px;
-    background:pink;
-    color:white;
-    font-weight: bold;
-    border:solid 1px red;
+  justify-content: space-around;
+  align-items: center;
+  .chat-space{
+    background-color: #ffdead;
     border-radius: 3px;
+    width: 640px;
+    height: 400px;
+    overflow: scroll;
+  }
+  .amigo-parent{
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    margin-right: 16px;
+    button{
+      height: 26px;
+      background:pink;
+      color:white;
+      font-weight: bold;
+      border:solid 1px red;
+      border-radius: 3px;
+    }
   }
 }
 
