@@ -105,7 +105,7 @@ h2{
   font-size: 36px;
 }
 
-.c-room, .room-index{
+.c-room{
   text-decoration: none;
   color: black;
   display: inline-block;
@@ -117,7 +117,7 @@ h2{
   transition: .4s;
 }
 
-.c-room:hover, .room-index:hover{
+.c-room:hover{
   background: black;
   color: white;
 }
