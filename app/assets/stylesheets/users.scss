@@ -98,27 +98,30 @@ table{
   padding: 5px;
 }
 
-input[type="text"], input[type="email"], input[type="password"]{
-  height: 30px;
-  width: 200px;
-  margin-top: 5px;
+.field{
+  input[type="text"], input[type="email"], input[type="password"]{
+    height: 30px;
+    width: 200px;
+    margin-top: 5px;
+  }
+  input[type="file"]{
+    margin-top: 5px;
+  }
 }
 
-input[type="file"]{
-  margin-top: 5px;
-}
-
-input[type="submit"]{
-  width: 270px;
-  height: 34px;
-  background: #87cefa;
-  color: white;
-  border-top: solid 1px #010079;
-  border-left: solid 1px #010079;
-  border-right: solid 1px #010079;
-  border-bottom: solid 2px #010079;
-  border-radius: 4px;
-  font-weight: bold;
+.actions{
+  input[type="submit"]{
+    width: 270px;
+    height: 34px;
+    background: #87cefa;
+    color: white;
+    border-top: solid 1px #010079;
+    border-left: solid 1px #010079;
+    border-right: solid 1px #010079;
+    border-bottom: solid 2px #010079;
+    border-radius: 4px;
+    font-weight: bold;
+  }
 }
 
 .auth-page{

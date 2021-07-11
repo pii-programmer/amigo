@@ -4,33 +4,39 @@
   <div class="room-chat">
 
     <h2><%= @room.title %></h2>
-    <div class="room-chat-header">
-        <%= link_to "#{@user1.nickname}さん", user_path(@user1.id), class: "user-nickname" %>
-        <%= link_to "#{@user2.nickname}さん", user_path(@user2.id), class: "user-nickname" %>
-      <%= form_with model: [@room, @message], local: true do |f| %>
-        <div class="room-chat-form">
-          <%= f.text_field :content %>
-          <%= f.submit 'しゃべってみる' %>
+
+      <div class="room-explain">
+        <div class="room-chat-users">
+          <%= link_to "#{@user1.nickname}さん", user_path(@user1.id), class: "user-nickname" %>
+          <%= link_to "#{@user2.nickname}さん", user_path(@user2.id), class: "user-nickname" %>
         </div>
-      <% end %>
-    </div>
 
-  <div class="amigo-parent">
-    <div class="amigo-space"><%=image_tag "amigo-icon.png", class: "amigoicon" %></div>
-    <div class="amigo-graph"><canvas id="amigograph" ></canvas></div>
-    <button id="button">更新</button>
-  </div>
-
-    <% @messages.each do |message| %>
-      <div class="room-chat-detail">
-      <%= message.content %>
+        <%= form_with model: [@room, @message], local: true do |f| %>
+          <div class="room-chat-form">
+            <%= f.text_field :content %>
+            <%= f.submit 'しゃべってみる' %>
+          </div>
+        <% end %>
       </div>
-    <% end %>
 
-    <div class="return-btn">
-      <%= link_to 'ルーム一覧に戻る', rooms_path, class:"room-index" %>
-      <%= link_to 'メインチャットに戻る', chats_path, class:"r-mainchat" %>
-    </div>
+      <div class="chat-wrapper">
+        <div class="chat-space">
+          <% @messages.each do |message| %>
+            <div class="room-chat-detail"><%= message.content %></div>
+          <% end %>
+        </div>
+
+        <div class="amigo-parent">
+          <div class="amigo-space"><%=image_tag "amigo-icon.png", class: "amigoicon" %></div>
+          <div class="amigo-graph"><canvas id="amigograph" ></canvas></div>
+          <button id="button">更新</button>
+        </div>
+      </div>
+
+      <div class="return-btn">
+        <%= link_to 'ルーム一覧に戻る', rooms_path, class:"room-index" %>
+        <%= link_to 'メインチャットに戻る', chats_path, class:"r-mainchat" %>
+      </div>
 
   </div>
 </div>
