@@ -38,11 +38,11 @@ http://54.150.238.148/
 工夫したポイントは、「Amigo」に熱中できる仕組みを作ったことです。  
 具体的には  
 - 人生ゲームの通貨を「アミーゴ」と名づけ、「アミーゴ」を獲得するためにチャットをし、獲得したアミーゴでまた人生ゲームを楽しめるという無限サイクルを作ったこと。  
-[![Image from Gyazo](https://i.gyazo.com/3c3ca4daaf86d8e856c20741d06f6e65.gif)](https://gyazo.com/3c3ca4daaf86d8e856c20741d06f6e65)
+[![Image from Gyazo](https://i.gyazo.com/88032e7110b662b6e4dfe1b516420574.gif)](https://gyazo.com/88032e7110b662b6e4dfe1b516420574)
 - チャット文のフォントをドット文字にすることで、ゲームの中にいるような感覚を再現したこと。  
-[![Image from Gyazo](https://i.gyazo.com/a231a84968fd15ebd2fc328a332d91ba.gif)](https://gyazo.com/a231a84968fd15ebd2fc328a332d91ba)
+[![Image from Gyazo](https://i.gyazo.com/629cf4f26ba33128cc64caf9541971b2.gif)](https://gyazo.com/629cf4f26ba33128cc64caf9541971b2)
 - ActionCableでメインチャット機能を実装することで、非同期通信を可能にし、やりとりのスムーズなチャットを作ったこと。  
-[![Image from Gyazo](https://i.gyazo.com/4595612cbc8fccfff194720ae0ebc797.gif)](https://gyazo.com/4595612cbc8fccfff194720ae0ebc797)
+[![Image from Gyazo](https://i.gyazo.com/46b7f6b3cd88fb8fe93ef702e9d028dc.gif)](https://gyazo.com/46b7f6b3cd88fb8fe93ef702e9d028dc)
 
 # 使用技術（開発環境）
 
