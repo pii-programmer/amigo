@@ -1,15 +1,3 @@
-<%- if controller_name != 'sessions' %>
-  <div class="auth-page-btn">
-  <%= link_to "ログインはこちら", new_session_path(resource_name), class:"auth-page" %><br />
-  </div>
-<% end %>
-
-<%- if devise_mapping.registerable? && controller_name != 'registrations' %>
-  <div class="auth-page-btn">
-  <%= link_to "サインインはこちら", new_registration_path(resource_name), class:"auth-page" %><br />
-  </div>
-<% end %>
-
 <%- if devise_mapping.recoverable? && controller_name != 'passwords' && controller_name != 'registrations' %>
   <%= link_to "パスワードを忘れてしまった", new_password_path(resource_name), class:"forgot-password" %><br />
 <% end %>
