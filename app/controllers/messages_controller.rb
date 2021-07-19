@@ -4,9 +4,16 @@ class MessagesController < ApplicationController
   def index
     @message = Message.new
     @room = Room.find(params[:room_id])
-    @user1 = User.find_by(id: @room.user_ids[0])
-    @user2 = User.find_by(id: @room.user_ids[1])
-    @user3 = User.find_by(id: @room.user_ids[2])
+    if @room.user_ids[0]
+      @user1 = User.find_by(id: @room.user_ids[0])
+    elsif @room.user_ids[0] && @room.user_ids[1]
+      @user1 = User.find_by(id: @room.user_ids[0])
+      @user2 = User.find_by(id: @room.user_ids[1])
+    else
+      @user1 = User.find_by(id: @room.user_ids[0])
+      @user2 = User.find_by(id: @room.user_ids[1])
+      @user3 = User.find_by(id: @room.user_ids[2])
+    end
     @messages = @room.messages.includes(:user).order(id: "DESC")
   end
 
