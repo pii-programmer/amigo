@@ -11,9 +11,9 @@ Amigo
 #### メインチャットページ
 [![Image from Gyazo](https://i.gyazo.com/9aa956283c53c9d0b15d933035b11e89.png)](https://gyazo.com/9aa956283c53c9d0b15d933035b11e89)
 #### ルームチャット一覧ページ
-[![Image from Gyazo](https://i.gyazo.com/9375a9f023695f1cf8b3dd319d3ebda8.png)](https://gyazo.com/9375a9f023695f1cf8b3dd319d3ebda8)
+[![Image from Gyazo](https://i.gyazo.com/273911d7cbddd729c1524bc53fd64adc.png)](https://gyazo.com/273911d7cbddd729c1524bc53fd64adc)
 #### ルームチャットページ
-[![Image from Gyazo](https://i.gyazo.com/f841f9f58a74a00a9c000a88fd1c497e.png)](https://gyazo.com/f841f9f58a74a00a9c000a88fd1c497e)
+[![Image from Gyazo](https://i.gyazo.com/396d79fabf54b9720e85c92d62a5e40a.png)](https://gyazo.com/396d79fabf54b9720e85c92d62a5e40a)
 #### マイページ
 [![Image from Gyazo](https://i.gyazo.com/16f196ba61245531e27b6eb72a18531f.jpg)](https://gyazo.com/16f196ba61245531e27b6eb72a18531f)
 
