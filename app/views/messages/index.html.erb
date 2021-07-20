@@ -9,7 +9,6 @@
         <div class="room-chat-users">
           <%= link_to "#{@user1.nickname}さん", user_path(@user1.id), class: "user-nickname" %>
           <%= link_to "#{@user2.nickname}さん", user_path(@user2.id), class: "user-nickname" %>
-          <%= link_to "#{@user3.nickname}さん", user_path(@user3.id), class: "user-nickname" %>
         </div>
 
         <%= form_with model: [@room, @message], local: true do |f| %>
