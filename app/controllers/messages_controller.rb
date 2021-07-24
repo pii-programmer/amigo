@@ -6,6 +6,7 @@ class MessagesController < ApplicationController
     @room = Room.find(params[:room_id])
     @user1 = User.find_by(id: @room.user_ids[0])
     @user2 = User.find_by(id: @room.user_ids[1])
+    @user3 = User.find_by(id: @room.user_ids[2])
     @messages = @room.messages.includes(:user).order(id: "DESC")
   end
 
