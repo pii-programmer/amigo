@@ -80,17 +80,20 @@ VSCode
 # DB設計
 
 ## usersテーブル
-|  Column            |  Type  | Options                    |
-| ------------------ | ------ | -------------------------- |
-| nickname           | string | null: false                |
-| email              | string | null: false,  unique: true |
-| encrypted_password | string | null: false                |
+|  Column            |  Type   | Options                      |
+| ------------------ | ------- | ---------------------------- |
+| nickname           | string  | null: false                  |
+| email              | string  | null: false,  unique: true   |
+| encrypted_password | string  | null: false                  |
+| level              | integer | null: false, default: "1"    |
 
 ### Association
 - has_many :chats
 - has_many :room_users
 - has_many :rooms, through: :room_users
 - has_many :messages
+- belongs_to :level
+
 
 
 ## roomsテーブル
@@ -137,4 +140,15 @@ VSCode
 | user     | references | null: false, foreign_key: true    |
 
 ### Association
-- belongs_to :users
+- belongs_to :user
+
+
+
+## levelsテーブル
+|  Column  |  Type      | Options                           |
+| -------- | ---------- | --------------------------------- |
+| level    | integer    | null: false                       |
+| user     | references | null: false, foreign_key: true    |
+
+### Association
+- belongs_to :user
