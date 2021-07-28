@@ -85,7 +85,6 @@ VSCode
 | nickname           | string  | null: false                  |
 | email              | string  | null: false,  unique: true   |
 | encrypted_password | string  | null: false                  |
-| level              | integer | null: false, default: "1"    |
 
 ### Association
 - has_many :chats
@@ -148,7 +147,3 @@ VSCode
 |  Column  |  Type      | Options                           |
 | -------- | ---------- | --------------------------------- |
 | level    | integer    | null: false                       |
-| user     | references | null: false, foreign_key: true    |
-
-### Association
-- belongs_to :user
